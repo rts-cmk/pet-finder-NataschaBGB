@@ -1,0 +1,50 @@
+@use '../style/variables' as var
+    
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "Lato", sans-serif
+
+.pet-finder
+
+    /* MARK: Splashscreen */
+    &__splashscreen
+        height: 100vh
+        background-color: var.$primary-bg-color
+
+    &__splashscreen-image
+        width: 100%
+
+    &__splashscreen-title
+        text-align: center
+        h1
+            margin-bottom: 1rem
+            font-size: 24px
+            font-weight: 900
+        p
+            line-height: 24px
+            color: #828282
+            font-size: 18px
+            width: 85%
+            margin: 0 auto
+    
+    &__splashscreen-button
+        position: fixed
+        bottom: 2rem
+        left: 50%
+        transform: translate( -50%)
+        width: 80%
+        padding: 1rem
+        font-size: 18px
+        color: #ffffff
+        border: none
+        border-radius: 25px
+        background-color: var.$button-color
+
+
+    /* MARK: Dogs */
+    &__dogs

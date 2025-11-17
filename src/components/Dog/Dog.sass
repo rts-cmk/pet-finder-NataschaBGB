@@ -1,0 +1,25 @@
+@use '../../style/variables' as var
+    
+.pet-finder
+
+    &__dog
+        display: grid
+        grid-template-columns: auto 1fr
+        margin: 2rem
+        box-shadow: 10px 10px 44px -19px rgba(0,0,0,0.75)
+        border-radius: 20px
+        background-color: var.$primary-bg-color
+    
+    &__dog-image
+        width: 150px
+        height: 150px
+        object-fit: cover
+        border-top-left-radius: 20px
+        border-bottom-left-radius: 20px
+
+    &__dog-description
+        position: relative
+    &__dog-heart
+        position: absolute
+        top: 5px
+        right: 5px

@@ -1,0 +1,42 @@
+@use '../../style/_variables' as var
+    
+.pet-finder
+
+    &__header
+        display: grid
+        grid-template-columns: 1fr auto
+        align-items: center
+        padding: 2rem
+
+        .notification-icon
+            height: 40px
+            width: 40px
+            background-color: var.$primary-bg-color
+            color: var.$icons-color
+            border-radius: 25px
+            padding: 8px
+            box-shadow: 14px 12px 29px -12px rgba(0,0,0,0.75)
+    
+    &__header-profile
+        display: flex
+        gap: 1rem
+        align-items: center
+        .header-image
+            height: 40px
+            width: 40px
+            object-fit: cover
+            border-radius: 25px
+            border: 2px solid #ffffff
+            box-shadow: 14px 12px 29px -12px rgba(0,0,0,0.75)
+        .header-location
+            display: flex
+            align-items: center
+            gap: .3rem
+            color: var.$title-color
+            text-transform: capitalize
+            .location-icon
+                font-size: 20px
+                color: var.$button-color
+            .arrow-icon
+                font-size: 14px
+                color: var.$button-color
