@@ -1,4 +1,6 @@
-import profile from '../../assets/profile.png'
+// import { useLoaderData } from "react-router";
+
+import profile from '../../assets/images/profile.png'
 import { MdLocationOn } from "react-icons/md";
 import { BsChevronDown } from "react-icons/bs";
 
@@ -7,6 +9,9 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import './Header.sass'
 
 export default function Header() {
+
+    // const user = useLoaderData();
+    // console.log(user);
 
     return (
         <header className="pet-finder__header">

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import animal from '../assets/Animal.svg'
+import animal from '../assets/images/animal.svg'
 import '../style/_layout.sass'
 
 

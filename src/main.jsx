@@ -1,38 +1,13 @@
-// import React from "react";
-// import ReactDOM from "react-dom/client";
-// import { BrowserRouter } from "react-router";
-// import App from './App.jsx'
-// import './main.sass'
-
-// const root = document.getElementById("root");
-
-// ReactDOM.createRoot(root).render(
-//   <BrowserRouter>
-//     <App />
-//   </BrowserRouter>,
-// );
-
-
-
-import { StrictMode } from 'react'
+import React from 'react'
 import { createRoot } from 'react-dom/client'
+import App from './App.jsx'
+import './style/main.sass'
 
-import { BrowserRouter, Routes, Route } from 'react-router'
+const rootElement = document.getElementById('root')
 
-import Splashscreen from './pages/Splashscreen.jsx'
-import Dogs from './pages/Dogs.jsx'
-import Details from './pages/Details.jsx'
 
-import './main.sass'
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Routes>
-          <Route path='/splashscreen' element={<Splashscreen />} />
-          <Route path='/' element={<Dogs />} />
-          <Route path='/details' element={<Details />} />
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>
+createRoot(rootElement).render(
+<React.StrictMode>
+<App />
+</React.StrictMode>
 )
