@@ -5,26 +5,30 @@
     &__dog
         display: grid
         grid-template-columns: auto 1fr
+        align-items: end
         margin: 2rem
         border-radius: 20px
         background-color: var.$primary-bg-color
-        text-decoration: none
     
     &__dog-image
         width: 130px
-        height: 150px
-        object-fit: cover
+        height: auto
+        object-fit: contain
+        padding: 0 0 0 1rem
         border-top-left-radius: 20px
         border-bottom-left-radius: 20px
 
     &__dog-content
         position: relative
-        padding: 1rem
+        padding: 1rem 2rem 1rem 1rem
 
     &__dog-title
+        a
+            text-decoration: none
+            color: var.$title-color
         h1
             font-size: 22px
-            color: var.$title-color
+            
         .dog-location
             display: flex
             gap: 5px
@@ -45,3 +49,4 @@
         font-size: 20px
         padding: 2px
         border-radius: 25px
+        z-index: 99

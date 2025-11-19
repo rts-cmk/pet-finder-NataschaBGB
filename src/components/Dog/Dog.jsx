@@ -13,14 +13,15 @@ export default function Dog() {
         <>
             {pets.map((pet) => {
                 return (
-                    <Link to={`/details/${pet.id}`} key={pet.id} className='pet-finder__dog shadow'>
-
+                    <section className='pet-finder__dog shadow'>
                         <img src={pet.image} alt={pet.breed} className='pet-finder__dog-image' />
                     
                         <article className='pet-finder__dog-content'>
                             
                             <div className='pet-finder__dog-title'>
-                                <h1>{pet.breed}</h1>
+                                <Link to={`/details/${pet.id}`} key={pet.id} >
+                                    <h1>{pet.breed}</h1>
+                                </Link>
                                 <div className="dog-location">
                                     <GrLocation className="location-icon" />
                                     <p>{pet.location}</p>
@@ -29,10 +30,9 @@ export default function Dog() {
 
                             <p className="pet-finder__dog-description">{pet.short_description}</p>
 
-                            <IoMdHeartEmpty className='pet-finder__dog-heart' />
+                            <IoMdHeartEmpty className='pet-finder__dog-heart shadow' />
                         </article>
-                            
-                </Link>
+                    </section>
                 )
             })}
             

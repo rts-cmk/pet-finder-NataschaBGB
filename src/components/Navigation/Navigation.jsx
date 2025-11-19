@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 import { CiHome } from "react-icons/ci";
 import { IoChatbubbleOutline } from "react-icons/io5";
@@ -7,17 +7,51 @@ import { RxPerson } from "react-icons/rx";
 
 import './Navigation.sass'
 
+
 export default function Navigation() {
-
+    
     return (
-        <nav className="pet-finder__navigation">
-            <Link to={"/"}>
-                <CiHome className="pet-finder__navigation-icon shadow" />
-            </Link>
-            <IoChatbubbleOutline className="pet-finder__navigation-icon shadow" />
-            <IoMdHeartEmpty className="pet-finder__navigation-icon shadow" />
-            <RxPerson className="pet-finder__navigation-icon shadow" />
-        </nav>
-    )
 
+        <nav className="pet-finder__navigation">
+
+            <NavLink 
+                to="/" 
+                className={({ isActive }) =>
+                `pet-finder__navigation-icon ${isActive ? "pet-finder__navigation-icon--active" : "shadow"}`
+                }
+                end
+            >
+                <CiHome />
+            </NavLink>
+
+            <NavLink 
+                to="/chat" 
+                className={({ isActive }) =>
+                `pet-finder__navigation-icon ${isActive ? "pet-finder__navigation-icon--active" : "shadow"}`
+                }
+            >
+                <IoChatbubbleOutline />
+            </NavLink>
+
+            <NavLink 
+                to="/favorites" 
+                className={({ isActive }) =>
+                `pet-finder__navigation-icon ${isActive ? "pet-finder__navigation-icon--active" : "shadow"}`
+                }
+            >
+                <IoMdHeartEmpty />
+            </NavLink>
+
+            <NavLink 
+                to="/profile" 
+                className={({ isActive }) =>
+                `pet-finder__navigation-icon ${isActive ? "pet-finder__navigation-icon--active" : "shadow"}`
+                }
+            >
+                <RxPerson />
+            </NavLink>
+
+        </nav>
+
+    );
 }
