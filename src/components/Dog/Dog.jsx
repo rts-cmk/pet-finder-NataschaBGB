@@ -38,7 +38,6 @@ export default function Dog() {
                                 <IoMdHeartEmpty className='' />
                             </button>
 
-
                         </article>
                     </section>
                 ))
