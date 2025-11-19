@@ -41,7 +41,7 @@ export default function DogDetails() {
                 </section>
 
                 <Link to={'/'}>
-                    <button className="pet-finder__details-button">Back</button>
+                    <button className="pet-finder__details-button">Home</button>
                 </Link>
                 
                 

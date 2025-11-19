@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router"
 import Dogs from './pages/Dogs'
 import Details from './pages/Details'
-import loadPets from "./loaders/loadPets";
+import loadUserAndPets from "./loaders/loadUserAndPets";
 import loadDetails from "./loaders/loadDetails";
 import Splashscreen from "./pages/Splashscreen";
+import Favourites from "./pages/Favourites";
 import Error from './pages/Error'
 
 
@@ -13,8 +14,8 @@ export default function App() {
     {
       path: '/',
       element: <Dogs />,
-      loader: loadPets,
-      hydrateFallbackElement: <p>Loading...</p>
+      loader: loadUserAndPets,
+      hydrateFallbackElement: <p>Loading Pets...</p>
     },
     {
       path: '/splashscreen',
@@ -24,11 +25,19 @@ export default function App() {
       path: '/details/:petId',
       element: <Details />,
       loader: loadDetails,
-      hydrateFallbackElement: <p>Loading...</p>
+      hydrateFallbackElement: <p>Loading Details...</p>
+    },
+    {
+      path: '/favourites',
+      element: <Favourites />,
+      loader: loadUserAndPets,
+      hydrateFallbackElement: <p>Loading Favourites...</p>
     },
     {
       path: '*',
-      element: <Error />
+      element: <Error />,
+      loader: loadUserAndPets,
+      hydrateFallbackElement: <p>Loading Error Page...</p>
     }
   ]);
 

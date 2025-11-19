@@ -34,7 +34,7 @@ export default function Navigation() {
             </NavLink>
 
             <NavLink 
-                to="/favorites" 
+                to="/favourites" 
                 className={({ isActive }) =>
                 `pet-finder__navigation-icon ${isActive ? "pet-finder__navigation-icon--active" : "shadow"}`
                 }

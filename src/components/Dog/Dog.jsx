@@ -1,19 +1,23 @@
 import { Link, useLoaderData } from "react-router";
 import { GrLocation } from "react-icons/gr";
 import { IoMdHeartEmpty } from "react-icons/io";
-
+import { useFavourites } from "../../hooks/Favourites/useFavourites";
 import './Dog.sass'
+
 
 export default function Dog() {
 
     const { pets } = useLoaderData();
     // console.log(pets);
 
+    const { addFavourite, isFavourite } = useFavourites();
+
     return (
         <>
-            {pets.map((pet) => {
-                return (
-                    <section className='pet-finder__dog shadow'>
+            {pets && pets.length > 0 ? (
+                pets.map((pet) => (
+                    
+                    <section key={pet.id} className='pet-finder__dog shadow'>
                         <img src={pet.image} alt={pet.breed} className='pet-finder__dog-image' />
                     
                         <article className='pet-finder__dog-content'>
@@ -30,13 +34,20 @@ export default function Dog() {
 
                             <p className="pet-finder__dog-description">{pet.short_description}</p>
 
-                            <IoMdHeartEmpty className='pet-finder__dog-heart shadow' />
+                            <button className={`pet-finder__dog-heart shadow ${isFavourite(pet.id) ? "pet-finder__dog-heart--added" : "pet-finder__dog-heart--not-added"}`} onClick={() => addFavourite(pet.id, pet.image, pet.breed, pet.location, pet.gender, pet.short_description)} disabled={isFavourite(pet.id)}>
+                                <IoMdHeartEmpty className='' />
+                            </button>
+
+
                         </article>
                     </section>
-                )
-            })}
-            
+                ))
+            ) : (
+                <section className="pet-finder__no-pets">
+                    <h3>No pets have been found</h3>
+                </section>
+            )}
         </>
     );
-    
+
 }

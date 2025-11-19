@@ -1,4 +1,4 @@
-export default async function loadPets() {
+export default async function loadUserAndPets() {
   
     const [userResponse, petsResponse] = await Promise.all([
         fetch('http://localhost:4000/user'),
