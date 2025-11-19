@@ -2,7 +2,9 @@ import { createBrowserRouter, RouterProvider } from "react-router"
 import Dogs from './pages/Dogs'
 import Details from './pages/Details'
 import loadPets from "./loaders/loadPets";
-// import loadUser from "./loaders/loadUser";
+import loadDetails from "./loaders/loadDetails";
+import Splashscreen from "./pages/Splashscreen";
+import Error from './pages/Error'
 
 
 export default function App() {
@@ -15,8 +17,18 @@ export default function App() {
       hydrateFallbackElement: <p>Loading...</p>
     },
     {
+      path: '/splashscreen',
+      element: <Splashscreen />
+    },
+    {
       path: '/details/:petId',
-      element: <Details />
+      element: <Details />,
+      loader: loadDetails,
+      hydrateFallbackElement: <p>Loading...</p>
+    },
+    {
+      path: '*',
+      element: <Error />
     }
   ]);
 

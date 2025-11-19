@@ -11,8 +11,31 @@
 
 .pet-finder
 
+    .shadow
+        box-shadow: 3px 2px 11px 2px rgba(182, 182, 182, 0.75)
+
+    /* MARK: Buttons */
+    // &__button
+    //     position: fixed
+    //     bottom: 3rem
+    //     left: 50%
+    //     transform: translate( -50%)
+    //     width: 80%
+    //     padding: 1rem
+    //     font-size: 18px
+    //     color: #ffffff
+    //     border: none
+    //     border-radius: 25px
+    //     background-color: var.$button-color
+    //     box-shadow: 3px 2px 11px 2px rgba(182, 182, 182, 0.75)
+
+
+
     /* MARK: Splashscreen */
     &__splashscreen
+        display: flex
+        flex-direction: column
+        justify-content: space-between
         height: 100vh
         background-color: var.$primary-bg-color
 
@@ -32,19 +55,33 @@
             width: 85%
             margin: 0 auto
     
-    &__splashscreen-button
-        position: fixed
-        bottom: 2rem
-        left: 50%
-        transform: translate( -50%)
+    &__splashscreen-button-container
         width: 80%
+        margin: 0 auto
+    &__splashscreen-button
+        width: 100%
+        margin: 0 0 3rem
         padding: 1rem
         font-size: 18px
         color: #ffffff
         border: none
         border-radius: 25px
         background-color: var.$button-color
+        box-shadow: 3px 2px 11px 2px rgba(182, 182, 182, 0.75)
+
 
 
     /* MARK: Dogs */
-    // &__dogs
+    &__dogs
+        margin: 0 0 10rem
+
+
+    
+    /* MARK: Details */
+    &__details
+        background-image: url('../assets/images/background.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: right
+        // min-height: fit-content
+        // height: 100vh

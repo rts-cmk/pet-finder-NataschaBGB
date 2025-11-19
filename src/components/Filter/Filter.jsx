@@ -4,10 +4,10 @@ export default function Filter() {
 
     return (
         <section className='pet-finder__filter'>
-            <p>Cats</p>
-            <p>Dogs</p>
-            <p>Birds</p>
-            <p>Other</p>
+            <p className='shadow'>Cats</p>
+            <p className='shadow'>Dogs</p>
+            <p className='shadow'>Birds</p>
+            <p className='shadow'>Other</p>
         </section>
     )
 

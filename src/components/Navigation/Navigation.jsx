@@ -12,11 +12,11 @@ export default function Navigation() {
     return (
         <nav className="pet-finder__navigation">
             <Link to={"/"}>
-                <CiHome className="pet-finder__navigation-icon home" />
+                <CiHome className="pet-finder__navigation-icon shadow" />
             </Link>
-            <IoChatbubbleOutline className="pet-finder__navigation-icon chat" />
-            <IoMdHeartEmpty className="pet-finder__navigation-icon heart" />
-            <RxPerson className="pet-finder__navigation-icon profile" />
+            <IoChatbubbleOutline className="pet-finder__navigation-icon shadow" />
+            <IoMdHeartEmpty className="pet-finder__navigation-icon shadow" />
+            <RxPerson className="pet-finder__navigation-icon shadow" />
         </nav>
     )
 

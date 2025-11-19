@@ -7,16 +7,16 @@ import Navigation from '../components/Navigation/Navigation.jsx'
 export default function Dogs() {
 
     return (
-        <>
+        <section className='pet-finder'>
             <Header />
-            
+
             <main className='pet-finder__dogs'>
                 <Filter />
                 <Dog />   
             </main>
 
             <Navigation />
-        </>
+        </section>
     )
 
 }

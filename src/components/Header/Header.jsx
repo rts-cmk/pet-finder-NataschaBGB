@@ -1,6 +1,5 @@
-// import { useLoaderData } from "react-router";
+import { useLoaderData } from "react-router";
 
-import profile from '../../assets/images/profile.png'
 import { MdLocationOn } from "react-icons/md";
 import { BsChevronDown } from "react-icons/bs";
 
@@ -10,21 +9,20 @@ import './Header.sass'
 
 export default function Header() {
 
-    // const user = useLoaderData();
-    // console.log(user);
+    const { user } = useLoaderData();
 
     return (
         <header className="pet-finder__header">
             <section className="pet-finder__header-profile">
-                <img src={profile} alt="pet-finder_profile_image" className='header-image'/>
+                <img src={user.image} alt="pet-finder_profile_image" className='header-image shadow'/>
                 <div className="header-location">
                     <MdLocationOn className="location-icon" />
-                    <p className="pet-finder__header-location">city</p>
+                    <p className="pet-finder__header-location">{user.location}</p>
                     <BsChevronDown className="arrow-icon" />
                 </div>
             </section>
             
-            <IoNotificationsOutline className="notification-icon" />
+            <IoNotificationsOutline className="notification-icon shadow" />
         </header>
     )
 

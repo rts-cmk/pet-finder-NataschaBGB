@@ -1,6 +1,4 @@
 import { Link, useLoaderData } from "react-router";
-
-import dog from '../../assets/images/dog.jpg'
 import { GrLocation } from "react-icons/gr";
 import { IoMdHeartEmpty } from "react-icons/io";
 
@@ -8,14 +6,14 @@ import './Dog.sass'
 
 export default function Dog() {
 
-    const pets = useLoaderData();
-    console.log(pets);
-    
+    const { pets } = useLoaderData();
+    // console.log(pets);
+
     return (
         <>
             {pets.map((pet) => {
                 return (
-                    <Link to={"/details"} key={pet.id} className='pet-finder__dog'>
+                    <Link to={`/details/${pet.id}`} key={pet.id} className='pet-finder__dog shadow'>
 
                         <img src={pet.image} alt={pet.breed} className='pet-finder__dog-image' />
                     
