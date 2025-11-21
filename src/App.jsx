@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router"
-import Dogs from './pages/Dogs'
+import Home from './pages/Home'
 import Details from './pages/Details'
 import loadUserAndPets from "./loaders/loadUserAndPets";
 import loadDetails from "./loaders/loadDetails";
@@ -13,7 +13,7 @@ export default function App() {
   const browserRouter = createBrowserRouter([
     {
       path: '/',
-      element: <Dogs />,
+      element: <Home />,
       loader: loadUserAndPets,
       hydrateFallbackElement: <p>Loading Pets...</p>
     },

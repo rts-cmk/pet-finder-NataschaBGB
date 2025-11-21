@@ -2,7 +2,7 @@ import { Link, useLoaderData } from "react-router";
 import { GrLocation } from "react-icons/gr";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { useFavourites } from "../../hooks/Favourites/useFavourites";
-import './Dog.sass'
+import './HomeDetails.sass'
 
 
 export default function Dog() {

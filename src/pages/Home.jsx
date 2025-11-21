@@ -1,6 +1,6 @@
 import Header from '../components/Header/Header.jsx'
 import Filter from '../components/Filter/Filter.jsx'
-import Dog from '../components/Dog/Dog.jsx'
+import HomeDetails from '../components/HomeDetails/HomeDetails.jsx'
 import Navigation from '../components/Navigation/Navigation.jsx'
 
 
@@ -12,7 +12,7 @@ export default function Dogs() {
 
             <main className='pet-finder__dogs'>
                 <Filter />
-                <Dog />   
+                <HomeDetails />   
             </main>
 
             <Navigation />
