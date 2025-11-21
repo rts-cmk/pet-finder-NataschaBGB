@@ -21,7 +21,7 @@ export default function DogDetails() {
     return (
         <article className="pet-finder__details-dog">
 
-            <img src={petDetails.image} alt={petDetails.breed} className="pet-finder__details-image" />
+            <img src={`../${petDetails.image}`} alt={petDetails.breed} className="pet-finder__details-image" />
 
             <section id={petId} className="pet-finder__details-text">
                 

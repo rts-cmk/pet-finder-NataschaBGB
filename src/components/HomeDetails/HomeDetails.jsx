@@ -19,7 +19,7 @@ export default function HomeDetails() {
                 data['dogs'].map((pet) => (
                     
                     <section key={pet.id} className='pet-finder__dog shadow'>
-                        <img src={pet.image} alt={pet.breed} className='pet-finder__dog-image' />
+                        <img src={`.${pet.image}`} alt={pet.breed} className='pet-finder__dog-image' />
                     
                         <article className='pet-finder__dog-content'>
                             
