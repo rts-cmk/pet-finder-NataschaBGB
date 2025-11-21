@@ -14,7 +14,7 @@ export default function Header() {
     return (
         <header className="pet-finder__header">
             <section className="pet-finder__header-profile">
-                <img src={data['user'].image} alt="pet-finder_profile_image" className='header-image shadow'/>
+                <img src={`.${data['user'].image}`} alt="pet-finder_profile_image" className='header-image shadow'/>
                 <div className="header-location">
                     <MdLocationOn className="location-icon" />
                     <p className="pet-finder__header-location">{data['user'].location}</p>
