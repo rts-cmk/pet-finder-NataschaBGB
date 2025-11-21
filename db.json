@@ -10,8 +10,8 @@
         "breed": "Greyhound",
         "gender": "male",
         "location": "New York City",
-        "short_description": "Taking care of a pet is my favorite, it helps me to ease my mind",
-        "long_description": "The dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf) is a domesticated carnivore of the family Canidae, known for its loyalty, intelligence, and long-standing companionship with humans across various cultures and environments."
+        "short_description": "A sleek, gentle and fast sighthound built for speed.",
+        "long_description": "This Greyhound is a calm, elegant soul who loves quiet companionship. Though built for speed, they’re happiest relaxing by your side. Gentle, sensitive, and deeply loyal, they’re looking for a peaceful home where they can bond closely with their people. They’ll thrive with someone who appreciates a soft-hearted, easygoing friend."
     },
     {
         "id": 2,
@@ -19,8 +19,8 @@
         "breed": "Dobermann",
         "gender": "male",
         "location": "Atlanta",
-        "short_description": "Taking care of a pet is my favorite, it helps me to ease my mind",
-        "long_description": "The dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf) is a domesticated carnivore of the family Canidae, known for its loyalty, intelligence, and long-standing companionship with humans across various cultures and environments."
+        "short_description": "Alert, loyal guardian with sleek, powerful build.",
+        "long_description": "This Dobermann is a loyal, intelligent companion who forms strong connections with their family. Alert and protective, they thrive with clear structure and guidance. Beneath the powerful exterior is a sensitive dog seeking a home with stability, affection, and purpose. With the right person, they blossom into a confident and devoted partner."
     },
     {
         "id": 3,
@@ -28,8 +28,35 @@
         "breed": "Pomeranian",
         "gender": "female",
         "location": "Philadelphia",
-        "short_description": "Taking care of a pet is my favorite, it helps me to ease my mind",
-        "long_description": "The dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf) is a domesticated carnivore of the family Canidae, known for its loyalty, intelligence, and long-standing companionship with humans across various cultures and environments."
+        "short_description": "Tiny, fluffy companion with bold, lively spirit.",
+        "long_description": "This Pomeranian may be tiny, but their personality is anything but. Lively, curious, and expressive, they adore being near their humans. They’re looking for a home where their cheerful energy, charm, and big heart can shine — and where attention is plentiful. In return, they offer endless affection and a joyful presence."
+    },
+    {
+        "id": 4,
+        "image": "http://localhost:4000/filebucket/dog4.png",
+        "breed": "German Shepherd",
+        "gender": "female",
+        "location": "Philadelphia",
+        "short_description": "Intelligent, loyal working dog with strength and agility.",
+        "long_description": "This German Shepherd is a smart, loyal, and hardworking dog who loves learning and staying engaged. They’re searching for a home that offers mental stimulation, meaningful tasks, and close interaction. A devoted companion who gives back every bit of love they receive. With guidance and activity, they’ll quickly become an irreplaceable member of the family."
+    },
+    {
+        "id": 5,
+        "image": "http://localhost:4000/filebucket/dog5.png",
+        "breed": "Mastiff",
+        "gender": "male",
+        "location": "Los Angeles",
+        "short_description": "Massive, gentle giant known for calm and devoted nature.",
+        "long_description": "This Mastiff is a gentle giant with a warm, steady nature. Patient, affectionate, and incredibly loyal, they seek a home that appreciates calm companionship. With room for their big body and even bigger heart, they’ll offer unwavering devotion in return. Their soothing presence brings comfort to everyone around them."
+    },
+    {
+        "id": 6,
+        "image": "http://localhost:4000/filebucket/dog6.png",
+        "breed": "Chow Chow",
+        "gender": "male",
+        "location": "Chicago",
+        "short_description": "Independent, fluffy dog with lion-like look and dignity.",
+        "long_description": "This Chow Chow is a dignified, independent dog who bonds deeply with those they trust. They thrive in a peaceful home with routine and mutual respect. Once their trust is earned, they reveal a quiet but profound devotion to their people. They’ll be happiest with someone who values their thoughtful, reserved nature."
     }
     ]
 }
