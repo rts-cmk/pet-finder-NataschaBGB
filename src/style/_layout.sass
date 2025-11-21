@@ -1,0 +1,102 @@
+@use '../style/variables' as var
+    
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "Lato", sans-serif
+
+
+
+// box shadow to add anywhere it is needed
+.shadow
+    box-shadow: 3px 2px 11px 2px rgba(182, 182, 182, 0.75)
+
+
+/* MARK: Pet Finder*/
+.pet-finder
+
+    &__no-pets
+        text-align: center
+        margin: 2rem 0
+
+
+
+    /* MARK: Splashscreen */
+    &__splashscreen
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100vh
+        background-color: var.$primary-bg-color
+
+    &__splashscreen-image
+        width: 100%
+
+    &__splashscreen-title
+        text-align: center
+        h1
+            margin-bottom: 1rem
+            font-size: 24px
+            font-weight: 900
+        p
+            line-height: 24px
+            color: #828282
+            font-size: 18px
+            width: 85%
+            margin: 0 auto
+    
+    &__splashscreen-button-container
+        width: 80%
+        margin: 0 auto
+    &__splashscreen-button
+        width: 100%
+        margin: 0 0 3rem
+        padding: 1rem
+        font-size: 18px
+        color: #ffffff
+        border: none
+        border-radius: 25px
+        background-color: var.$button-color
+        box-shadow: 3px 2px 11px 2px rgba(182, 182, 182, 0.75)
+
+
+    
+    /* MARK: Home, Chats, Favourites */
+    &__home, &__chats, &__favourites
+        margin: 0 0 10rem
+        padding: 0 2rem
+
+        h1
+            text-align: center
+
+
+    
+    /* MARK: Details */
+    &__details
+        background-image: url('../assets/images/background.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: right
+
+
+
+    /* MARK: Error */
+    &__error
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 1rem
+        height: 70vh
+        text-align: center
+        margin: 0 2rem
+        .error-icon
+            font-size: 150px
+        h1
+            font-size: 3rem
+        p
+            font-size: 2rem

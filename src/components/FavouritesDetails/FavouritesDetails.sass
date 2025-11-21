@@ -1,0 +1,59 @@
+@use '../../style/variables' as var
+    
+.pet-finder
+
+    &__favourite
+        display: grid
+        grid-template-columns: auto 1fr
+        align-items: end
+        margin: 2rem 0
+        border-radius: 20px
+        background-color: var.$primary-bg-color
+    
+    &__favourite-image
+        width: 130px
+        height: auto
+        object-fit: contain
+        padding: 0 0 0 1rem
+        border-top-left-radius: 20px
+        border-bottom-left-radius: 20px
+
+    &__favourite-content
+        position: relative
+        padding: 1rem 2.5rem 1rem 1rem
+
+    &__favourite-title
+        a
+            text-decoration: none
+            color: var.$title-color
+        h1
+            font-size: 22px
+            
+        .favourite-location
+            display: flex
+            gap: 5px
+            align-items: center
+            padding: .3rem 0 .5rem
+            .location-icon
+                color: var.$icons-color
+            p
+                color: var.$secondary-font-color
+    &__favourite-description
+        color: var.$primary-font-color
+    
+    &__favourite-delete
+        position: absolute
+        top: 15px
+        right: 15px
+        background-color: #eb1d1d
+        opacity: .8
+        color: white
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 18px
+        height: 30px
+        width: 30px
+        padding: 2px
+        border: none
+        border-radius: 25px
