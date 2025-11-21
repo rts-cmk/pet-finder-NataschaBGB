@@ -10,9 +10,9 @@ export default function Dogs() {
         <section className='pet-finder'>
             <Header />
 
-            <main className='pet-finder__dogs'>
+            <main className='pet-finder__home'>
                 <Filter />
-                <HomeDetails />   
+                <HomeDetails />
             </main>
 
             <Navigation />

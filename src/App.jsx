@@ -4,6 +4,7 @@ import Details from './pages/Details'
 import loadUserAndPets from "./loaders/loadUserAndPets";
 import loadDetails from "./loaders/loadDetails";
 import Splashscreen from "./pages/Splashscreen";
+import Chat from './pages/Chat'
 import Favourites from "./pages/Favourites";
 import Error from './pages/Error'
 
@@ -32,6 +33,12 @@ export default function App() {
       element: <Favourites />,
       loader: loadUserAndPets,
       hydrateFallbackElement: <p>Loading Favourites...</p>
+    },
+    {
+      path: '/chat',
+      element: <Chat />,
+      loader: loadUserAndPets,
+      hydrateFallbackElement: <p>Loading Chat...</p>
     },
     {
       path: '*',

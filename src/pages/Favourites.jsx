@@ -10,7 +10,11 @@ export default function Favorites() {
             <Header />
 
             <main className='pet-finder__favourites'>
+                
+                <h1>Favourites</h1>
+
                 <FavouritesDetails />
+            
             </main>
         
             <Navigation />

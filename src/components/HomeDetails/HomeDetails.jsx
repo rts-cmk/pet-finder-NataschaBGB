@@ -5,7 +5,7 @@ import { useFavourites } from "../../hooks/Favourites/useFavourites";
 import './HomeDetails.sass'
 
 
-export default function Dog() {
+export default function HomeDetails() {
 
     const { pets } = useLoaderData();
     // console.log(pets);
@@ -24,7 +24,7 @@ export default function Dog() {
                             
                             <div className='pet-finder__dog-title'>
                                 <Link to={`/details/${pet.id}`} key={pet.id} >
-                                    <h1>{pet.breed}</h1>
+                                    <h2>{pet.breed}</h2>
                                 </Link>
                                 <div className="dog-location">
                                     <GrLocation className="location-icon" />

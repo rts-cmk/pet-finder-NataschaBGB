@@ -21,7 +21,7 @@ export default function FavoritesDetails() {
                             
                             <div className='pet-finder__favourite-title'>
                                 <Link to={`/details/${pet.id}`} key={pet.id} >
-                                    <h1>{pet.title}</h1>
+                                    <h2>{pet.title}</h2>
                                 </Link>
                                 <div className="favourite-location">
                                     <GrLocation className="location-icon" />
