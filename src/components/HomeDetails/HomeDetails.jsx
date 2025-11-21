@@ -7,15 +7,16 @@ import './HomeDetails.sass'
 
 export default function HomeDetails() {
 
-    const { pets } = useLoaderData();
-    // console.log(pets);
+    const data = useLoaderData();
+    // console.log(data['dogs']);
 
     const { addFavourite, isFavourite } = useFavourites();
 
     return (
         <>
-            {pets && pets.length > 0 ? (
-                pets.map((pet) => (
+            {data['dogs'] && data['dogs'].length > 0 ? (
+                
+                data['dogs'].map((pet) => (
                     
                     <section key={pet.id} className='pet-finder__dog shadow'>
                         <img src={pet.image} alt={pet.breed} className='pet-finder__dog-image' />

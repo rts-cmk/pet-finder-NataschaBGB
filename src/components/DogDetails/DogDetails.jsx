@@ -7,8 +7,16 @@ import './DogDetails.sass'
 
 export default function DogDetails() {
 
-    const petDetails = useLoaderData();
+    const pets = useLoaderData();
+    // console.log(pets);
+    
     const { petId } = useParams();
+    // console.log(petId);
+    
+    const petDetails = pets['dogs'].find(pet => pet.id === Number(petId));
+
+    if (!petDetails) return <p>Dog not found...</p>;
+
 
     return (
         <article className="pet-finder__details-dog">
