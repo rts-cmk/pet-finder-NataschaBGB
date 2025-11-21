@@ -4,7 +4,7 @@ import HomeDetails from '../components/HomeDetails/HomeDetails.jsx'
 import Navigation from '../components/Navigation/Navigation.jsx'
 
 
-export default function Dogs() {
+export default function Home() {
 
     return (
         <section className='pet-finder'>
