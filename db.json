@@ -57,6 +57,15 @@
       "location": "Chicago",
       "short_description": "Independent, fluffy dog with lion-like look and dignity.",
       "long_description": "This Chow Chow is a dignified, independent dog who bonds deeply with those they trust. They thrive in a peaceful home with routine and mutual respect. Once their trust is earned, they reveal a quiet but profound devotion to their people. They’ll be happiest with someone who values their thoughtful, reserved nature."
+    },
+    {
+      "image": "http://localhost:5000/filebucket/1763988203875-testdog.png",
+      "breed": "Golden retriever",
+      "gender": "Female",
+      "location": "new york",
+      "short_description": "Friendly, loyal, and intelligent dog with a golden coat, who loves people and is easy to train.",
+      "long_description": "Golden Retrievers are happy, friendly, and intelligent dogs that thrive in families and love spending time with people and children. They are easy to train, social, and loyal, with a natural working drive that makes them excellent for hunting, retrieving, and as service dogs. Their golden coat and calm temperament make them beloved companion animals.",
+      "id": 7
     }
   ]
 }

@@ -1,17 +1,16 @@
-export default async function detailsLoader({ params }) {
+import { fixImageUrl } from "../utils/fixImageUrl";
 
+export default async function detailsLoader({ params }) {
     const id = params.petId;
 
-    // db.json API
-    const response = await fetch(`http://localhost:4000/dogs/${id}`);
-
-    // Davids API
-    // const response = await fetch(`https://davids-api.onrender.com/api/db`);
+    const response = await fetch(`http://localhost:4000/pets/${id}`);
 
     if (!response.ok) {
         throw new Response("Not found", { status: 404 });
     }
 
-    return await response.json();
+    const pet = await response.json();
+    
+    return { ...pet, image: fixImageUrl(pet.image) };
 
 }

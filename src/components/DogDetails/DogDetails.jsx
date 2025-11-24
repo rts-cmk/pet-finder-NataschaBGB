@@ -15,7 +15,6 @@ export default function DogDetails() {
     // console.log(pets);
     
     const { petId } = useParams();
-    // console.log(petId);
     
     // const petDetails = pets['dogs'].find(pet => pet.id === Number(petId));
 
@@ -26,7 +25,6 @@ export default function DogDetails() {
         <article className="pet-finder__details-dog">
 
             <img src={petDetails.image} alt={petDetails.breed} className="pet-finder__details-image" />
-            {/* <img src={`../${petDetails.image}`} alt={petDetails.breed} className="pet-finder__details-image" /> */}
 
             <section id={petId} className="pet-finder__details-text">
                 
@@ -56,7 +54,6 @@ export default function DogDetails() {
                 <Link to={'/'}>
                     <button className="pet-finder__details-button">Home</button>
                 </Link>
-                
                 
             </section>
         </article>

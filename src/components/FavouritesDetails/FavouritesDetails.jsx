@@ -9,7 +9,12 @@ export default function FavoritesDetails() {
 
     const { favourite, removeFavourite } = useFavourites();
     
-    // console.log(favourite);
+    console.log(favourite);
+
+    const fixImageUrl = (url) => {
+        if (!url) return "";
+        return url.replace("localhost:4000", "localhost:5000");
+    }
     
 
     return (
@@ -18,7 +23,7 @@ export default function FavoritesDetails() {
                 favourite.map((pet) => (
                 
                     <section key={pet.id} className='pet-finder__favourite shadow'>
-                        <img src={pet.img} alt={pet.breed} className='pet-finder__favourite-image' />
+                        <img src={fixImageUrl(pet.img)} alt={pet.breed} className='pet-finder__favourite-image' />
                         {/* <img src={`.${pet.img}`} alt={pet.breed} className='pet-finder__favourite-image' /> */}
                     
                         <article className='pet-finder__favourite-content'>

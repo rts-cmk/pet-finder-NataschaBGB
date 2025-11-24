@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router";
 import './SubmitNewDog.sass'
 import { IoIosArrowForward } from "react-icons/io";
 import { useState } from "react";
 
 const SubmitNewDog = () => {
   const [imageFile, setImageFile] = useState(null);
+  const navigate = useNavigate();
 
   console.log("imageFile:", imageFile);
 
@@ -52,6 +54,7 @@ const SubmitNewDog = () => {
 
       const petResult = await petRes.json();
       console.log("Dog added:", petResult);
+      navigate("/");
 
     } catch (err) {
       console.error("Error uploading dog:", err);
