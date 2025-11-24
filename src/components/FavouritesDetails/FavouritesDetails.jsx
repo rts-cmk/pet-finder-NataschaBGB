@@ -18,7 +18,8 @@ export default function FavoritesDetails() {
                 favourite.map((pet) => (
                 
                     <section key={pet.id} className='pet-finder__favourite shadow'>
-                        <img src={`.${pet.img}`} alt={pet.breed} className='pet-finder__favourite-image' />
+                        <img src={pet.img} alt={pet.breed} className='pet-finder__favourite-image' />
+                        {/* <img src={`.${pet.img}`} alt={pet.breed} className='pet-finder__favourite-image' /> */}
                     
                         <article className='pet-finder__favourite-content'>
                             

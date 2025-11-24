@@ -7,13 +7,17 @@ import './DogDetails.sass'
 
 export default function DogDetails() {
 
-    const pets = useLoaderData();
+    // db.json API
+    const petDetails = useLoaderData();
+
+    // Davids API
+    // const pets = useLoaderData();
     // console.log(pets);
     
     const { petId } = useParams();
     // console.log(petId);
     
-    const petDetails = pets['dogs'].find(pet => pet.id === Number(petId));
+    // const petDetails = pets['dogs'].find(pet => pet.id === Number(petId));
 
     if (!petDetails) return <p>Dog not found...</p>;
 
@@ -21,7 +25,8 @@ export default function DogDetails() {
     return (
         <article className="pet-finder__details-dog">
 
-            <img src={`../${petDetails.image}`} alt={petDetails.breed} className="pet-finder__details-image" />
+            <img src={petDetails.image} alt={petDetails.breed} className="pet-finder__details-image" />
+            {/* <img src={`../${petDetails.image}`} alt={petDetails.breed} className="pet-finder__details-image" /> */}
 
             <section id={petId} className="pet-finder__details-text">
                 
