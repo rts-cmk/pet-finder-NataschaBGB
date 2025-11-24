@@ -1,29 +1,32 @@
-import { useLoaderData } from "react-router";
-
+import { Link, useLoaderData } from "react-router";
 import { MdLocationOn } from "react-icons/md";
 import { BsChevronDown } from "react-icons/bs";
-
 import { IoNotificationsOutline } from "react-icons/io5";
-
 import './Header.sass'
 
+
 export default function Header() {
+  const { user } = useLoaderData();
 
-    const data = useLoaderData();
 
-    return (
-        <header className="pet-finder__header">
-            <section className="pet-finder__header-profile">
-                <img src={`.${data['user'].image}`} alt="pet-finder_profile_image" className='header-image shadow'/>
+  return (
+    <header className="pet-finder__header">
+      <section className="pet-finder__header-profile">
+                
+                <Link to={'/admin'}>
+                    <img src={user.image} alt="profile" className="header-image" />
+                    {/* <img src={`.${data['user'].image}`} alt="pet-finder_profile_image" className='header-image shadow'/> */}
+                </Link>
+                
                 <div className="header-location">
                     <MdLocationOn className="location-icon" />
-                    <p className="pet-finder__header-location">{data['user'].location}</p>
+                    <p className="pet-finder__header-location">{user.location}</p>
+                    {/* <p className="pet-finder__header-location">{data['user'].location}</p> */}
                     <BsChevronDown className="arrow-icon" />
                 </div>
             </section>
-            
-            <IoNotificationsOutline className="notification-icon shadow" />
-        </header>
-    )
-
+      
+      <IoNotificationsOutline className="notification-icon shadow" />
+    </header>
+  )
 }
