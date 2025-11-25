@@ -1,53 +1,59 @@
-// import DeletePet from '../DeletePet/DeletePet'
+import { useState } from 'react';
+import { useLoaderData } from 'react-router';
 import './DisplayPets.sass'
-
+import { GrLocation } from 'react-icons/gr';
+import AdminEdit from '../../pages/Admin/AdminEdit';
+import Modal from './Modal';
 
 export default function DisplayPets() {
+    
+    const { pets } = useLoaderData();
+    const [selectedPetId, setSelectedPetId] = useState(null);
+    // console.log(selectedPetId);
+    
 
     return (
         <section className='admin__pets'>
+            
             {pets && pets.length > 0 ? (
                 pets.map((pet) => (
-                <section key={pet.id} className='admin__pet shadow'>
-                    <img src={pet.image} alt={pet.breed} className='pet-finder__pet-image' />
-                    
-                    <article className='pet-finder__pet-content'>
-                    <div className='pet-finder__pet-title'>
-                        <Link to={`/details/${pet.id}`} key={pet.id}>
-                        <h2>{pet.breed}</h2>
-                        </Link>
-                        <div className="pet-location">
-                        <GrLocation className="location-icon" />
-                        <p>{pet.location}</p>
-                        </div>
-                    </div>
+                    <section key={pet.id} className='admin__pet shadow'>
+                        
+                        <img src={pet.image} alt={pet.breed} className='admin__pet-image' />
+                        
+                        <article className='admin__pet-content'>
+                            <div className='admin__pet-title'>
+                                <h2>{pet.breed}</h2>
+                                <div className='pet-location'>
+                                    <GrLocation className='location-icon' />
+                                    <p>{pet.location}</p>
+                                </div>
+                            </div>
 
-                    <p className="pet-finder__pet-description">{pet.short_description}</p>
+                            <p className='admin__pet-description'>{pet.short_description}</p>
 
-                    <button
-                        className={`pet-finder__pet-heart shadow ${isFavourite(pet.id) ? "pet-finder__pet-heart--added" : "pet-finder__pet-heart--not-added"}`}
-                        onClick={() => addFavourite(
-                        pet.id,
-                        fixImageUrl(pet.image),
-                        pet.breed,
-                        pet.location,
-                        pet.gender,
-                        pet.short_description
-                        )}
-                        disabled={isFavourite(pet.id)}
-                    >
-                        <IoMdHeartEmpty className='' />
-                    </button>
+                            <button onClick={() => setSelectedPetId(pet.id)}>
+                                Edit Pet
+                            </button>
 
-                    </article>
-                </section>
+                        </article>
+                    </section>
                 ))
             ) : (
-                <section className="pet-finder__no-pets">
-                <h3>No pets have been found</h3>
+                <section className='admin__no-pets'>
+                    <h3>No pets have been found</h3>
                 </section>
             )}
-        </section>
-    )
 
+            {selectedPetId && (
+                <Modal onClose={() => setSelectedPetId(null)}>
+                    <AdminEdit
+                    key={selectedPetId} 
+                    petId={selectedPetId}
+                    pet={pets.find(p => p.id === selectedPetId)}
+                    />
+                </Modal>
+            )}
+        </section>
+    );
 }

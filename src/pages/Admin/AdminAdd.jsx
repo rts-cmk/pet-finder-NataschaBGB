@@ -41,13 +41,13 @@ export default function AdminAdd() {
 
     // const data = Object.fromEntries(formData);
     const data = {
-      category: formData.get("category"),
-      image: formData.get("image"),
-      breed: formData.get("breed"),
-      gender: formData.get("gender"),
-      location: formData.get("location"),
-      short_description: formData.get("short_description"),
-      long_description: formData.get("long_description"),
+      "category": formData.get("category"),
+      "image": formData.get("image"),
+      "breed": formData.get("breed"),
+      "gender": formData.get("gender"),
+      "location": formData.get("location"),
+      "short_description": formData.get("short_description"),
+      "long_description": formData.get("long_description"),
     };
 
     // console.log(data);
@@ -68,11 +68,8 @@ export default function AdminAdd() {
 
 
   return (
-    <>
 
-      <Header />
-
-      <main className="admin">
+      <section className="admin__add">
 
         <h2>Add a new pet</h2>
 
@@ -89,8 +86,8 @@ export default function AdminAdd() {
           </label>
 
           <label className="admin__label">
-            <span>Image</span>
-            <input type="text" name="image" onChange={(event) => setImageFile(event.target.value)} />
+            <span>Image URL</span>
+            <input type="text" name="image" placeholder="/imageurl.png" onChange={(event) => setImageFile(event.target.value)} />
           </label>
 
           <label className="admin__label">
@@ -118,16 +115,13 @@ export default function AdminAdd() {
             <textarea name="long_description" placeholder="Long Description..." onChange={(event) => setLongDescription(event.target.value)}/>
           </label>
 
-          <button>
+          <button type="submit">
             Add Pet
             <IoIosArrowForward />
           </button>
 
         </form>
-      </main>
-
-      <Navigation />
-    </>
+      </section>
   );
 
 }

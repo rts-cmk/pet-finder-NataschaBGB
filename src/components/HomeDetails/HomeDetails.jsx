@@ -37,7 +37,7 @@ export default function HomeDetails() {
                 className={`home__pet-heart shadow ${isFavourite(pet.id) ? "home__pet-heart--added" : "home__pet-heart--not-added"}`}
                 onClick={() => addFavourite(
                   pet.id,
-                  fixImageUrl(pet.image),
+                  pet.image,
                   pet.breed,
                   pet.location,
                   pet.gender,

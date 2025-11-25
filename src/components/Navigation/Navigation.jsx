@@ -34,7 +34,7 @@ export default function Navigation() {
                 <IoMdHeartEmpty />
             </NavLink>
 
-            <NavLink to="/admin/add" 
+            <NavLink to="/admin/" 
                 className={
                 ({ isActive }) =>
                     `pet-finder__navigation-icon ${isActive ? "pet-finder__navigation-icon--active" : "shadow"}`
