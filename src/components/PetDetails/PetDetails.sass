@@ -1,0 +1,80 @@
+@use '../../style/_variables' as var
+    
+.pet-finder
+
+    &__details-dog
+        display: grid
+        grid-template-rows: 360px 1fr
+        align-items: end
+        justify-items: end
+        height: 100vh
+
+        .location-icon
+            color: var.$icons-color
+        .info-icon
+            height: 40px
+            width: 40px
+            border-radius: 25px
+            padding: 8px
+            box-shadow: 3px 2px 11px 2px rgba(182, 182, 182, 0.75)
+        .breed-icon
+            color: #F4B207
+        .gender-icon
+            color: #FF8893
+    
+    &__details-image
+        height: 250px
+        margin: 0 20px 0
+
+    &__details-text
+        height: 100%
+        width: 100%
+        padding: 2rem 2rem 3rem
+        background-color: var.$primary-bg-color
+        border-top-left-radius: 25px
+        border-top-right-radius: 25px
+        display: flex
+        flex-direction: column
+        gap: 1.5rem
+
+    &__details-title
+        h1
+            color: var.$title-color
+            margin: 0 0 .5rem
+            text-transform: capitalize
+        p
+            color: var.$secondary-font-color
+            font-size: 14px
+            text-transform: capitalize
+    
+    &__details-location
+        display: flex
+        gap: .5rem
+    
+    &__details-info
+        display: flex
+        align-items: center
+        gap: 2rem
+        .info
+            display: flex
+            align-items: center
+            gap: 1rem
+        p
+            color: var.$primary-font-color
+            text-transform: capitalize
+
+    &__details-description
+        color: #9E9E9E
+        font-size: 18px
+        line-height: 24px
+
+    &__details-button
+        width: 100%
+        margin: 4rem 0 0
+        padding: 1rem
+        font-size: 18px
+        color: #ffffff
+        border: none
+        border-radius: 25px
+        background-color: var.$button-color
+        box-shadow: 3px 2px 11px 2px rgba(182, 182, 182, 0.75)

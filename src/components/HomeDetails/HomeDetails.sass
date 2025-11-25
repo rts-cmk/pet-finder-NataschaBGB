@@ -1,0 +1,69 @@
+@use '../../style/variables' as var
+    
+.home
+
+    &__pet
+        display: grid
+        grid-template-columns: auto 1fr
+        align-items: end
+        margin: 2rem 0
+        border-radius: 20px
+        background-color: var.$primary-bg-color
+    
+    &__pet-image
+        width: 130px
+        height: auto
+        object-fit: contain
+        padding: 0 0 0 1rem
+        border-top-left-radius: 20px
+        border-bottom-left-radius: 20px
+
+    &__pet-content
+        position: relative
+        padding: 1rem 2.5rem 1rem 1rem
+
+    &__pet-title
+        a
+            text-decoration: none
+            color: var.$title-color
+        h1
+            font-size: 22px
+            
+        .pet-location
+            display: flex
+            gap: 5px
+            align-items: center
+            padding: .3rem 0 .5rem
+            text-transform: capitalize
+            .location-icon
+                color: var.$icons-color
+            p
+                color: var.$secondary-font-color
+    &__pet-description
+        color: var.$primary-font-color
+
+
+    &__pet-heart
+        position: absolute
+        top: 15px
+        right: 15px
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #BDBDBD
+        font-size: 20px
+        padding: 5px
+        border: none
+        border-radius: 50%
+    
+    &__pet-heart--not-added
+        background-color: var.$primary-bg-color
+
+    &__pet-heart--not-added:hover
+        background-color: var.$primary-bg-color
+        opacity: .8
+
+    &__pet-heart--added
+        background-color: #eb1d1d
+        color: white
+        cursor: not-allowed
