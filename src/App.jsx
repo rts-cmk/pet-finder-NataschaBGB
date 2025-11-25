@@ -6,8 +6,10 @@ import loadDetails from "./loaders/loadDetails";
 import Splashscreen from "./pages/Splashscreen";
 import Chat from './pages/Chat'
 import Favourites from "./pages/Favourites";
-import Admin from "./pages/Admin";
+// import Admin from "./pages/Admin";
 import Error from './pages/Error'
+import AdminAdd from "./pages/Admin/AdminAdd";
+import AdminEdit from "./pages/Admin/AdminEdit";
 
 
 export default function App() {
@@ -44,9 +46,20 @@ export default function App() {
       },
       {
         path: '/admin',
-        element: <Admin />,
-        loader: loadUserAndPets,
-        hydrateFallbackElement: <p>Loading User...</p>
+        children: [
+          {
+            path: '/admin/add',
+            element: <AdminAdd />,
+            loader: loadUserAndPets,
+            hydrateFallbackElement: <p>Loading Pets...</p>,
+          },
+          {
+            path: '/admin/edit/:petId',
+            element: <AdminEdit />,
+            loader: loadDetails,
+            hydrateFallbackElement: <p>Loading Details...</p>
+          }
+        ]
       },
       {
         path: '*',

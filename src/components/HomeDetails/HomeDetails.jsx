@@ -4,40 +4,37 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { useFavourites } from "../../hooks/Favourites/useFavourites";
 import './HomeDetails.sass'
 
-// Helper til at rette port, hvis billed-URL peger på 4000
-const fixImageUrl = (url) => {
-  if (!url) return "";
-  return url.replace("localhost:4000", "localhost:5000");
-}
 
 export default function HomeDetails() {
   
-    const { pets } = useLoaderData();
+  const { pets } = useLoaderData();
+  // console.log(pets);
   
-    const { addFavourite, isFavourite } = useFavourites();
+  
+  const { addFavourite, isFavourite } = useFavourites();
 
   return (
-    <>
+    <section className="home__pets">
       {pets && pets.length > 0 ? (
         pets.map((pet) => (
-          <section key={pet.id} className='pet-finder__dog shadow'>
-            <img src={pet.image} alt={pet.breed} className='pet-finder__dog-image' />
+          <section key={pet.id} className='home__pet shadow'>
+            <img src={pet.image} alt={pet.breed} className='home__pet-image' />
             
-            <article className='pet-finder__dog-content'>
-              <div className='pet-finder__dog-title'>
+            <article className='home__pet-content'>
+              <div className='home__pet-title'>
                 <Link to={`/details/${pet.id}`} key={pet.id}>
                   <h2>{pet.breed}</h2>
                 </Link>
-                <div className="dog-location">
+                <div className="pet-location">
                   <GrLocation className="location-icon" />
                   <p>{pet.location}</p>
                 </div>
               </div>
 
-              <p className="pet-finder__dog-description">{pet.short_description}</p>
+              <p className="home__pet-description">{pet.short_description}</p>
 
               <button
-                className={`pet-finder__dog-heart shadow ${isFavourite(pet.id) ? "pet-finder__dog-heart--added" : "pet-finder__dog-heart--not-added"}`}
+                className={`home__pet-heart shadow ${isFavourite(pet.id) ? "home__pet-heart--added" : "home__pet-heart--not-added"}`}
                 onClick={() => addFavourite(
                   pet.id,
                   fixImageUrl(pet.image),
@@ -55,10 +52,10 @@ export default function HomeDetails() {
           </section>
         ))
       ) : (
-        <section className="pet-finder__no-pets">
+        <section className="home__no-pets">
           <h3>No pets have been found</h3>
         </section>
       )}
-    </>
+    </section>
   );
 }
