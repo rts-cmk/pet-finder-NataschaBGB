@@ -1,8 +1,8 @@
 @use '../../style/variables' as var
     
-.pet-finder
+.home
 
-    &__dog
+    &__pet
         display: grid
         grid-template-columns: auto 1fr
         align-items: end
@@ -10,7 +10,7 @@
         border-radius: 20px
         background-color: var.$primary-bg-color
     
-    &__dog-image
+    &__pet-image
         width: 130px
         height: auto
         object-fit: contain
@@ -18,18 +18,18 @@
         border-top-left-radius: 20px
         border-bottom-left-radius: 20px
 
-    &__dog-content
+    &__pet-content
         position: relative
         padding: 1rem 2.5rem 1rem 1rem
 
-    &__dog-title
+    &__pet-title
         a
             text-decoration: none
             color: var.$title-color
         h1
             font-size: 22px
             
-        .dog-location
+        .pet-location
             display: flex
             gap: 5px
             align-items: center
@@ -39,11 +39,11 @@
                 color: var.$icons-color
             p
                 color: var.$secondary-font-color
-    &__dog-description
+    &__pet-description
         color: var.$primary-font-color
 
 
-    &__dog-heart
+    &__pet-heart
         position: absolute
         top: 15px
         right: 15px
@@ -56,14 +56,14 @@
         border: none
         border-radius: 50%
     
-    &__dog-heart--not-added
+    &__pet-heart--not-added
         background-color: var.$primary-bg-color
 
-    &__dog-heart--not-added:hover
+    &__pet-heart--not-added:hover
         background-color: var.$primary-bg-color
         opacity: .8
 
-    &__dog-heart--added
+    &__pet-heart--added
         background-color: #eb1d1d
         color: white
         cursor: not-allowed

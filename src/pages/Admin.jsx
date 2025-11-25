@@ -1,6 +1,8 @@
+import { Link } from 'react-router'
 import Header from '../components/Header/Header.jsx'
 import Navigation from '../components/Navigation/Navigation.jsx'
-import SubmitNewDog from '../components/SubmitNewDog/SubmitNewDog.jsx'
+import AdminAdd from './Admin/AdminAdd.jsx'
+import DisplayPets from '../components/DisplayPets/DisplayPets.jsx'
 
 
 export default function Admin() {
@@ -9,12 +11,14 @@ export default function Admin() {
         <>
             <Header />
             
-            <main className='pet-finder__admin'>
+            <main className='admin'>
                 
                 <h1>Admin</h1>
 
-                <SubmitNewDog />
-            
+                <AdminAdd />
+
+                <DisplayPets />
+                
             </main>
         
             <Navigation />

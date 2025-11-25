@@ -1,5 +1,3 @@
-import { fixImageUrl, fixImageUrlsInArray } from "../utils/fixImageUrl";
-
 export default async function loadUserAndPets() {
   const [userResponse, petsResponse] = await Promise.all([
     fetch("http://localhost:4000/user"),
@@ -11,11 +9,8 @@ export default async function loadUserAndPets() {
     petsResponse.json()
   ]);
 
-  // Ret billed-URLs automatisk
-  const fixedUser = { ...user, image: fixImageUrl(user.image) };
-  const fixedPets = fixImageUrlsInArray(pets);
+  return {user, pets};
 
-  return { user: fixedUser, pets: fixedPets };
 
 
   // Davids API

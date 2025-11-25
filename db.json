@@ -6,6 +6,7 @@
   "pets": [
     {
       "id": 1,
+      "category": "dog",
       "image": "http://localhost:4000/filebucket/dog1.png",
       "breed": "Greyhound",
       "gender": "male",
@@ -15,6 +16,7 @@
     },
     {
       "id": 2,
+      "category": "dog",
       "image": "http://localhost:4000/filebucket/dog2.png",
       "breed": "Dobermann",
       "gender": "male",
@@ -24,6 +26,7 @@
     },
     {
       "id": 3,
+      "category": "dog",
       "image": "http://localhost:4000/filebucket/dog3.png",
       "breed": "Pomeranian",
       "gender": "female",
@@ -33,6 +36,7 @@
     },
     {
       "id": 4,
+      "category": "dog",
       "image": "http://localhost:4000/filebucket/dog4.png",
       "breed": "German Shepherd",
       "gender": "female",
@@ -42,6 +46,7 @@
     },
     {
       "id": 5,
+      "category": "dog",
       "image": "http://localhost:4000/filebucket/dog5.png",
       "breed": "Mastiff",
       "gender": "male",
@@ -51,6 +56,7 @@
     },
     {
       "id": 6,
+      "category": "dog",
       "image": "http://localhost:4000/filebucket/dog6.png",
       "breed": "Chow Chow",
       "gender": "male",
@@ -59,6 +65,7 @@
       "long_description": "This Chow Chow is a dignified, independent dog who bonds deeply with those they trust. They thrive in a peaceful home with routine and mutual respect. Once their trust is earned, they reveal a quiet but profound devotion to their people. They’ll be happiest with someone who values their thoughtful, reserved nature."
     },
     {
+      "category": "dog",
       "image": "http://localhost:5000/filebucket/1763988203875-testdog.png",
       "breed": "Golden retriever",
       "gender": "Female",
@@ -66,6 +73,74 @@
       "short_description": "Friendly, loyal, and intelligent dog with a golden coat, who loves people and is easy to train.",
       "long_description": "Golden Retrievers are happy, friendly, and intelligent dogs that thrive in families and love spending time with people and children. They are easy to train, social, and loyal, with a natural working drive that makes them excellent for hunting, retrieving, and as service dogs. Their golden coat and calm temperament make them beloved companion animals.",
       "id": 7
+    },
+    {
+      "category": "dog",
+      "image": "/testdog.png",
+      "breed": "Golden retreiver",
+      "gender": "male",
+      "location": "new york",
+      "short_description": "fafad",
+      "long_description": "dasfgdgd",
+      "id": 8
+    },
+    {
+      "image": "/testdog.png",
+      "breed": "Golden retreiver",
+      "gender": "male",
+      "location": "new york",
+      "short_description": "dasdd",
+      "long_description": "sad",
+      "id": 9
+    },
+    {
+      "image": "/testdog.png",
+      "breed": "Golden retreiver",
+      "gender": "male",
+      "location": "new yorkd",
+      "short_description": "ssd",
+      "long_description": "dsgfa",
+      "id": 10
+    },
+    {
+      "category": "cat",
+      "image": "/testdog.png",
+      "breed": "Golden retreiver",
+      "gender": "male",
+      "location": "new yorks",
+      "short_description": "csaca",
+      "long_description": "csdsdf",
+      "id": 11
+    },
+    {
+      "category": "cat",
+      "image": "/testdog.png",
+      "breed": "Golden retreiver",
+      "gender": "male",
+      "location": "new york",
+      "short_description": "ccs",
+      "long_description": "cssc",
+      "id": 12
+    },
+    {
+      "category": "bird",
+      "image": "/testdog.png",
+      "breed": "Golden retreiver",
+      "gender": "male",
+      "location": "new york",
+      "short_description": "csac",
+      "long_description": "csafdsg",
+      "id": 13
+    },
+    {
+      "category": "dog",
+      "image": "/testdog.png",
+      "breed": "",
+      "gender": "",
+      "location": "new york",
+      "short_description": "fsdfsf",
+      "long_description": "",
+      "id": 14
     }
   ]
 }

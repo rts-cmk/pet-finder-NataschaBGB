@@ -1,5 +1,3 @@
-import { fixImageUrl } from "../utils/fixImageUrl";
-
 export default async function detailsLoader({ params }) {
     const id = params.petId;
 
@@ -11,6 +9,6 @@ export default async function detailsLoader({ params }) {
 
     const pet = await response.json();
     
-    return { ...pet, image: fixImageUrl(pet.image) };
+    return pet;
 
 }

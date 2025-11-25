@@ -2,7 +2,7 @@ import { Link, useLoaderData, useParams } from "react-router";
 import { GrLocation } from "react-icons/gr";
 import { PiPawPrint } from "react-icons/pi";
 import { BsGenderAmbiguous } from "react-icons/bs";
-import './DogDetails.sass'
+import './PetDetails.sass'
 
 
 export default function DogDetails() {
@@ -18,7 +18,7 @@ export default function DogDetails() {
     
     // const petDetails = pets['dogs'].find(pet => pet.id === Number(petId));
 
-    if (!petDetails) return <p>Dog not found...</p>;
+    if (!petDetails) return <p>Pet not found...</p>;
 
 
     return (

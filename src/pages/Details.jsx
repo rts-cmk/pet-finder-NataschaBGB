@@ -1,4 +1,4 @@
-import DogDetails from '../components/DogDetails/DogDetails'
+import PetDetails from '../components/PetDetails/PetDetails'
 
 
 export default function Details() {
@@ -6,7 +6,7 @@ export default function Details() {
     return (
         <main className="pet-finder__details" >
 
-            <DogDetails />
+            <PetDetails />
 
         </main>
     );
